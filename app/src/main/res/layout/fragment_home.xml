@@ -39,6 +39,7 @@
             android:gravity="center">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/tv_water_card"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
@@ -65,13 +66,13 @@
                         android:text="Water"
                         android:textColor="@color/primary_color"
                         android:textSize="18sp" />
-
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/tv_medicine_card"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
@@ -113,6 +114,7 @@
             android:gravity="center">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/tv_food_card"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
@@ -139,13 +141,13 @@
                         android:text="Food"
                         android:textColor="@color/primary_color"
                         android:textSize="18sp" />
-
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/tv_sleep_card"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"

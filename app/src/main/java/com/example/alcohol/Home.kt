@@ -1,22 +1,29 @@
 package com.example.alcohol
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
+import androidx.appcompat.app.AppCompatActivity
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Home.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Home : Fragment() {
+
+//im here int for cardview id
+    private lateinit var cardView1: CardView
+    private lateinit var cardView2: CardView
+    private lateinit var cardView3: CardView
+    private lateinit var cardView4: CardView
+
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -33,21 +40,48 @@ class Home : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+// Найдите все CardView из макета и присвойте им переменные
+        cardView1 = view.findViewById(R.id.tv_water_card)
+        cardView2 = view.findViewById(R.id.tv_medicine_card)
+        cardView3 = view.findViewById(R.id.tv_food_card)
+        cardView4 = view.findViewById(R.id.tv_sleep_card)
+
+        // Установите обработчики нажатий на каждую CardView
+        cardView1.setOnClickListener {
+            val intent = Intent(activity, WaterActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardView2.setOnClickListener {
+            // здесь можно добавить переход на другую активити для второй CardView
+            val intent = Intent(activity, MedicineActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardView3.setOnClickListener {
+            // здесь можно добавить переход на другую активити для третьей CardView
+            val intent = Intent(activity, FoodActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardView4.setOnClickListener {
+            // здесь можно добавить переход на другую активити для четвертой CardView
+            val intent = Intent(activity, SleepActivity::class.java)
+            startActivity(intent)
+        }
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Home.
-         */
+
         // TODO: Rename and change types and number of parameters
         @JvmStatic
+        fun newInstance() = Home()
         fun newInstance(param1: String, param2: String) =
             Home().apply {
                 arguments = Bundle().apply {

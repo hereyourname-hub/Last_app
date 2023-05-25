@@ -15,7 +15,7 @@ import com.example.alcohol.databinding.ActivityMedicineBinding
 import java.text.DateFormat
 import java.util.Calendar
 import java.util.Date
-private lateinit var reminderDao: ReminderDao
+
 
 class MedicineActivity : AppCompatActivity() {
 

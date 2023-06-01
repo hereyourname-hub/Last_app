@@ -5,80 +5,48 @@
     android:orientation="vertical"
     tools:context=".MedicineActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
+
+
+    <TextView
+        android:id="@+id/selectedTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/titleET"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/name_of_the_medicine" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/messageET"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/message_title" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-
-        <DatePicker
-            android:id="@+id/datePicker"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:datePickerMode="spinner"
-            android:calendarViewShown="false"
-            android:layout_gravity="center"
-            android:scaleY="0.7"
-            android:scaleX="0.7"
-            android:layout_marginHorizontal="-30dp" />
-
-        <TimePicker
-            android:id="@+id/timePicker"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:timePickerMode="spinner"
-            android:layout_gravity="center"
-            android:scaleY="0.7"
-            android:scaleX="0.7"
-            android:layout_marginHorizontal="-30dp" />
-    </LinearLayout>
+        android:layout_marginTop="200dp"
+        android:text="08:45 PM"
+        android:textAlignment="center"
+        android:textColor="@color/primary_color"
+        android:textSize="38dp"
+        android:fontFamily="@font/montserrat"/>
 
     <Button
-        android:id="@+id/subButton"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
+        android:id="@+id/selectTimeBtn"
+        style="@style/ButtonGreen"
+        android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:text="Schedule Notification"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="36dp"
+        android:text="select time"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/setAlarmBtn"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="26dp"
+        android:text="set"
+        android:textSize="14dp"
         style="@style/ButtonGreen"
         />
 
     <Button
-        android:id="@+id/btnAddReminder"
-        android:layout_width="wrap_content"
+        android:id="@+id/cancelAlarmBtn"
+        android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:text="View Reminders"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="26dp"
+        android:text="cancel"
+        android:textSize="14dp"
         style="@style/ButtonGreen"
         />
 

@@ -16,13 +16,8 @@
         android:theme="@style/Theme.Alcohol"
         tools:targetApi="31">
         <activity
-            android:name=".ReminderListActivity"
+            android:name=".DestinationActivity"
             android:exported="false" />
-
-        <receiver
-            android:name=".Notification"
-            android:enabled="true" />
-
         <activity
             android:name=".SleepActivity"
             android:exported="false" />
@@ -53,6 +48,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".AlarmReceiver" />
     </application>
 
 </manifest>

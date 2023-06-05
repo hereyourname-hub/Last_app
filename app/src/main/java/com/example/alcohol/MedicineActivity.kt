@@ -58,7 +58,7 @@ class MedicineActivity : AppCompatActivity() {
         alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
         val intent = Intent(this,AlarmReceiver::class.java)
 
-        pendingIntent = PendingIntent.getBroadcast(this,0,intent,0)
+        pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
 
         alarmManager.cancel(pendingIntent)
@@ -70,7 +70,7 @@ class MedicineActivity : AppCompatActivity() {
         alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
         val intent = Intent(this,AlarmReceiver::class.java)
 
-        pendingIntent = PendingIntent.getBroadcast(this,0,intent,0)
+        pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
         alarmManager.setRepeating(
 
